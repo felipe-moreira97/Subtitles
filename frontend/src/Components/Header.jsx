@@ -24,7 +24,8 @@ function Header(props) {
     return (
         <header className="Header">
             <form onSubmit={e => handleSubmit(e)}>
-                <input type='file' ref={fileInput} multiple />
+                <label htmlFor="input-file">Upload subtitles</label>
+                <input id="input-file" type='file' ref={fileInput} multiple />
                 <input type="submit" />
             </form>
         </header>

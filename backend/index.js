@@ -22,7 +22,7 @@ app.post('/',upload.array('subtitle'),(req,res,next) => {
         .map(row => row.replace('\r',''))
         .map(row => row.replace('\d',''))
         .filter(row => row.search('-->') < 0)
-        .map(row => row.replace(/[,.?!-:'"]/g,''))
+        .map(row => row.replace(/[,.?!-:[\]"]/g,''))
         .map(row => row.replace(/(<[^>]+)>/ig,'').trim())
         .filter(row => !parseInt(row))
         .filter(row => row !== '')
