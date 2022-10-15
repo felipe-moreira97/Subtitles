@@ -15,7 +15,6 @@ app.use((req,res,next)=> {
     res.header('Access-Control-Allow-Methods',['GET','POST','PUT','DELETE'])
     next()
 })
-
 app.post('/',upload.array('subtitle'),(req,res,next) => {
     const rows = req.files.map(files => fs.readFileSync(files.path).toString('utf-8'))
         .reduce((acc,cur) => `${acc}\n ${cur}`)
