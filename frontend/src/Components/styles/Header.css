@@ -1,0 +1,8 @@
+.Header {
+    background-image: linear-gradient(90deg, #6495ed, #0c3c96);
+    height: 64px;
+    box-shadow: 0 10px 10px #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
